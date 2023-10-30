@@ -1,0 +1,384 @@
+/* Importing the 'Exo' and 'Lato' fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Exo', 'Lato', Arial, sans-serif; /* 'Exo' is set as the primary font */
+}
+
+header {
+    background-color: #FFFFFF;
+    color: #333333;
+    text-align: center;
+    border-bottom: 1px solid #EAEAEA;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Styling the h1 link to look like regular text */
+header h1 a {
+    color: inherit; /* make the link color the same as the text color */
+    text-decoration: none; /* remove underline */
+}
+
+/* Remove any change in appearance on hover for the h1 link */
+header h1 a:hover {
+    color: inherit;
+}
+
+.main-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+#intro h2 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.3em;
+    line-height: 1.5;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #0070FF;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    color: #FF77FF;
+}
+
+#intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 30px; /* or adjust this value to your liking */
+}
+
+
+#intro img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 50px;  /* Adjust this value as needed */
+}
+
+
+footer {
+    background-color: #FFFFFF;
+    font-size: 0.8em;
+    border-top: 1px solid #EAEAEA;
+    margin-top: 50px;
+    position: relative; /* relative positioning */
+}
+
+.collapsible-header {
+    cursor: pointer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.collapsible-header::after {
+    content: '⮟';
+    font-size: 15px;
+    float: right;
+    transition: transform 0.2s ease-out;
+}
+
+.collapsible-content {
+    padding: 0 18px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    transition: max-height 0.2s ease-out;
+}
+
+.collapsible-content p {
+    margin: 5px 0;
+}
+
+/* CSS for when the content is collapsed */
+.collapsible-header:not(.expanded)::after {
+    transform: rotate(0deg);
+}
+
+/* CSS for when the header is expanded */
+.collapsible-header.expanded::after {
+    transform: rotate(180deg);
+}
+
+/* New styles for the headers */
+#coursework-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#university-name {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+.footer-content {
+    padding: 1em 0;
+    text-align: right;
+}
+
+.theme-toggle {
+    position: absolute; /* absolute positioning */
+    bottom: 3em;
+    left: 1em; /* Change from right to left */
+    z-index: 10; /* Higher z-index to ensure it's above other elements */
+}
+
+#toggleTheme {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#themeIcon {
+    width: 40px;
+    height: 40px;
+}
+
+body.dark-mode #themeIcon {
+    filter: invert(100%);
+}
+
+body.dark-mode {
+    background-color: #121212; /* Dark background color */
+    color: #EAEAEA; /* Light text color */
+}
+
+body.dark-mode header {
+    background-color: #121212; /* Slightly lighter than the body background */
+    color: #EAEAEA;
+}
+
+body.dark-mode nav ul li a {
+    color: #BB86FC; /* Light link color for dark mode */
+}
+
+body.dark-mode nav ul li a:hover {
+    color: #FF77FF;
+}
+
+body.dark-mode footer {
+    background-color: #121212;
+    color: #EAEAEA;
+    border-top: 1px solid #3d3d3d;
+}
+
+body.dark-mode footer .footer-content a,
+body.dark-mode .experience-container a {
+    color: #BB86FC;
+}
+
+body.dark-mode footer .footer-content a:hover,
+body.dark-mode .experience-container a:hover {
+    color: #FF77FF; 
+}
+
+/* Light mode (default) */
+footer .footer-content a, 
+.experience-container a {
+    color: #0070FF;
+    text-decoration: none; /* Optional: to remove the underline */
+}
+
+footer .footer-content a:hover,
+.experience-container a:hover {
+    color: #FF77FF; 
+}
+
+/* Dark mode */
+body.dark-mode footer .footer-content a {
+    color: #BB86FC;
+}
+
+body.dark-mode footer .footer-content a:hover {
+    color: #FF77FF; 
+}
+
+/* Dark mode adjustments for collapsible headers and content */
+body.dark-mode .collapsible-header {
+    background-color: #2a2a2a; /* Darker shade for header background in dark mode */
+    color: #EAEAEA; /* Light text color for headers in dark mode */
+    border-color: #3d3d3d; /* Darker border for the header in dark mode */
+}
+
+body.dark-mode .collapsible-content {
+    background-color: #232323; /* Darker background for content in dark mode */
+    border-color: #3d3d3d; /* Darker border for the content in dark mode */
+}
+
+body.dark-mode .collapsible-content p {
+    color: #EAEAEA; /* Light text color for content in dark mode */
+}
+
+
+/* Styles for the Centered Header */
+.centered-header {
+    text-align: center;
+    font-size: 2.1em;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+/* Styling for Experience Section */
+.experience-section {
+    background-color: #f1f1f1;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.experience-title {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+.experience-description {
+    font-size: 0.8em;
+    margin-bottom: 20px;
+}
+
+.experience-duration {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #0070FF;
+}
+
+.experience-section:hover {
+    background-color: #EAECEF; /* Slightly darker shade on hover */
+}
+
+.experience-content ul {
+    padding-left: 20px; /* Adjust the space before the bullet points */
+}
+
+.experience-content h3 {
+    font-size: 1.8em; /* Largest font size for the course title */
+    margin-bottom: 15px;
+}
+
+.experience-content p {
+    font-size: 1.3em; /* Slightly smaller for the role */
+    margin-bottom: 15px;
+    font-weight: 600; /* Making it a bit bolder for emphasis */
+}
+
+.experience-content li {
+    font-size: 1.1em; /* Adjust the font size for the list items */
+    margin-bottom: 10px; /* Provide some space between each list item */
+}
+
+/* Defining a container for the experience section */
+.experience-container {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for the transform and shadow */
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    justify-content: space-between; /* Even space between items */
+    margin-bottom: 20px; /* You can adjust this value */
+}
+
+.experience-container:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
+}
+
+/* Styling the image on the left side */
+.experience-image {
+    flex: 1; /* Take up one part of the space */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    margin-right: 20px;
+}
+
+.experience-image img {
+    max-width: 100%; /* Ensures the image won't be larger than its container */
+    max-height: 100%; /* Ensures the image won't be taller than its container */
+}
+/* Styling the experience content */
+.experience-content {
+    flex: 3; /* Take up three parts of the space */
+    width: 65%; /* Making the experience content narrower */
+    padding: 5px; /* Adding some padding for space */
+    border-left: 2px solid #EAEAEA; /* Optional: Adding a left border for visual distinction */
+}
+
+.experience-location {
+    position: absolute;
+    top: 0%;    /* Adjust this to move it vertically */
+    right: 0%;  /* Adjust this to move it horizontally */
+    text-align: right; /* Align items to the right */
+    padding: 5px; /* Padding around the text */
+    border-radius: 5px; /* Optional: adding a slight border-radius */
+}
+
+
+/* Dark mode adjustments */
+body.dark-mode .experience-section {
+    background-color: #1F1F1F;
+    color: #C7C7C7;
+}
+
+body.dark-mode .experience-section:hover {
+    background-color: #292929; /* Slightly lighter shade on hover */
+}
+
+body.dark-mode .experience-duration {
+    color: #AAAAAA; /* Lighter color for dark mode */
+}
+
+#typed-output::after {
+    content: '|'; /* this is after the cursor */
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 49% {
+        opacity: 0;
+    }
+    50%, 100% {
+        opacity: 1;
+    }
+}

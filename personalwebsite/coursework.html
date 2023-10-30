@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicholas Adesina - Coursework</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="collapsibleheader.js" defer></script>
+</head>
+
+<body>
+    <div class="main-container">
+
+        <!-- Header Section - Copied from index.html -->
+        <header>
+            <h1><a href="./">Nicholas Adesina</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="coursework.html">Coursework</a></li>
+                    <li><a href="index.html#projects-materials">Projects & Materials</a></li>
+                    <li><a href="index.html#experiences">Experiences</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Coursework Header -->
+        <section id="coursework-header">
+            <h2 id="coursework-title">Coursework</h2>
+            <h3 id="university-name">@ University of California, Berkeley</h3>
+        </section>
+
+        <!-- Coursework Details -->
+        <section id="coursework-content">
+            <!-- Spring 2024 Header -->
+            <div class="collapsible-header">Spring 2024 (Planned)</div>
+            <!-- Content that will collapse/expand -->
+            <div class="collapsible-content">
+                <p>STAT 198: Computational Statistics [Myself]</p>
+                <p>COMPSCI 189: Machine Learning [Jonathan Shewchuk]</p>
+                <p>STAT 165: Forecasting [Jacob Steinhardt]</p>
+                <p>INDENG/IEOR 172: Probability and Risk Analysis for Engineers [Thibaut Mastrolia]</p>
+            </div>
+            <div style="height: 20px;"></div> <!-- This div will add spacing between the two collapsible sections -->
+            <!-- Fall 2023 Header -->
+            <div class="collapsible-header">Fall 2023</div>
+            <!-- Content that will collapse/expand -->
+            <div class="collapsible-content">
+                <p>COMPSCI 70 Discrete Mathematics and Probability Theory [Satish Rao]</p>
+                <p>COMPSCI 61A: The Structure and Interpretation of Computer Programs [John Denero]</p>
+                <p>MATH 54: Linear Algebra and Differential Equations [Zvezdelina Stankova]</p>
+                <p>STAT 33B: Advanced Programming in R [Gaston Sanchez Trujillo]</p>
+                <p>COMPSCI 198: Competitive Programming and Algorithms [CC@B]</p>
+            </div>
+        </section>
+
+        <!-- Footer/Contact Section - Copied from index.html -->
+        <footer>
+            <div class="footer-content">
+                <p>© Nicholas Adesina</p>
+                <p><a href="mailto:nickadesina@berkeley.edu">Contact Me</a></p>
+            </div>
+            <div class="theme-toggle">
+                <button id="toggleTheme">
+                    <img src="images/moon-solid.svg" id="themeIcon" alt="Toggle Theme">
+                </button>
+            </div>
+        </footer>
+    </div>
+    <script src="themeToggle.js"></script>
+</body>
+
+</html>
