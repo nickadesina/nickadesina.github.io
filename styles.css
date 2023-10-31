@@ -113,7 +113,9 @@ footer {
 }
 
 .collapsible-header::after {
-    content: '⮟';
+    content: '\f078';
+    font-family: 'Font Awesome 5 Free'; /* or 'Font Awesome 5 Pro' if you have the Pro version */
+    font-weight: 900;
     font-size: 15px;
     float: right;
     transition: transform 0.2s ease-out;
