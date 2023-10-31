@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const content = header.nextElementSibling;
 
         // Initially set the content to be expanded
-        content.style.maxHeight = content.scrollHeight + "px";
+        content.style.maxHeight = "1000px";  // Set an arbitrary large value for max-height
         header.classList.add('expanded');
 
         header.addEventListener('click', function() {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (this.classList.contains('expanded')) {
                 content.style.maxHeight = '0px'; // collapse
             } else {
-                content.style.maxHeight = content.scrollHeight + "px"; // expand
+                content.style.maxHeight = "1000px"; // Set an arbitrary large value for max-height when expanding
             }
             this.classList.toggle('expanded');
         });
