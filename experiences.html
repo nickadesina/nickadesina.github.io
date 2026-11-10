@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicholas Adesina - Coursework</title>
+    <title>Nicholas Adesina - Experiences</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <script src="collapsibleHeader.js" defer></script>
@@ -34,32 +34,112 @@
         <!-- Experiences Sections -->
         <div class="experience-container">
             <div class="experience-image">
-                <img src="images/aws.png" alt="Experience Image">
+                <i class="fas fa-user-secret experience-icon" aria-hidden="true"></i>
             </div>
             <div class="experience-content">
-                <h3>Amazon Web Services</h3>
-                <p>Software Development Engineer Intern</p>
+                <div class="experience-heading">
+                    <h3>Stealth Startup</h3>
+                    <div class="experience-location">
+                        <p>Sep 2026 &ndash; Nov 2026</p>
+                        <p>San Francisco, CA</p>
+                    </div>
+                </div>
+                <p>Founder</p>
                 <ul>
-                    <li>Led the transition from Client-Side Rendering (CSR) to Server-Side Rendering (SSR) using Next.js, reducing initial load
-                        times by up to 40% and improving Largest Contentful Paint (LCP) by 35% on the DataZone portal.
-                        </li>
-                    <li>Implemented SSR for critical pages (Login, Home, Search), achieving a 50% faster time-to-interactive and enhancing user
-                        experience across various devices and network conditions.</li>
-                    <li>Resolved complex issues related to custom routing and state management, improving system reliability and ensuring
-                        seamless SSR integration with existing infrastructure.</li>
+                    <li>Building a published index of private-company marks from public filings (<strong>EDGAR N-PORT/N-CSR</strong> fair values,
+                        <strong>Delaware COI</strong> per-series price and preference stack, <strong>Form D</strong> SPV terms); one row per
+                        mark/series/filer/filing, from which consensus, cross-filer dispersion, log mark-vs-print and structure gap recompute.
+                        Scheduled EDGAR ingest into <strong>Neon Postgres</strong>, versioned <code>/api/ref/*</code> payloads, CC BY 4.0 exports,
+                        <strong>Next.js</strong> site.</li>
+                    <li>Designed and backtested a dealer-model venue on five private names (OpenAI, Anthropic, Anduril, Modal, Instinct):
+                        two-outcome <strong>LMSR</strong> round-timing binary plus a cash-settled forward on log next post-money, clipped
+                        &plusmn;&kappa;, quoted around a model mid (leave-one-out tier prior, <strong>Weibull</strong> hazard); cap
+                        <em>Q</em>&nbsp;=&nbsp;$10k, <em>b</em>&nbsp;=&nbsp;$1k fit by backtest, worst case &asymp;$160k/yr vs. &asymp;$23k/yr
+                        informed flow. Accepted to <strong>Paradigm Frontiers</strong>.</li>
                 </ul>
             </div>
-            <div class="experience-location">
-                <p>June 2024-Aug 2024</p>
-                <p>Palo Alto, CA</p>
-            </div>
         </div>
+
         <div class="experience-container">
             <div class="experience-image">
-                <img src="images/statberkeley.png" alt="Experience Image">
+                <i class="fas fa-robot experience-icon" aria-hidden="true"></i>
             </div>
             <div class="experience-content">
-                <h3>Statistics 198 - Computational Statistics</h3>
+                <div class="experience-heading">
+                    <h3>Eragon <span class="experience-note">(a16z Speedrun, Khosla Ventures)</span></h3>
+                    <div class="experience-location">
+                        <p>Feb 2026 &ndash; Sep 2026</p>
+                        <p>San Francisco, CA</p>
+                    </div>
+                </div>
+                <p>Software Engineer, first engineer on current product</p>
+                <ul>
+                    <li>Sole engineer on the current product: designed and built the second prototype on a new agent-harness architecture
+                        (tool/connection layer, auth and session handling, deployment path) and scaled it into production.</li>
+                    <li>Ran on-premise deployments into customer environments for <strong>Deel</strong>, <strong>Slash</strong> and
+                        <strong>Corgi</strong>: per-tenant configuration and credential handling, debugging against customer infra, and
+                        building vertical-specific agent workflows on the harness.</li>
+                    <li>Solo-owned security compliance: maintained <strong>SOC 2</strong> controls and evidence collection, drafted the
+                        <strong>ISO 27001</strong> ISMS, and took both through to independent-auditor sign-off.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="experience-container">
+            <div class="experience-image">
+                <i class="fab fa-atlassian experience-icon" aria-hidden="true"></i>
+            </div>
+            <div class="experience-content">
+                <div class="experience-heading">
+                    <h3>Atlassian</h3>
+                    <div class="experience-location">
+                        <p>May 2025 &ndash; Aug 2025</p>
+                        <p>San Francisco, CA</p>
+                    </div>
+                </div>
+                <p>Software Engineering Intern</p>
+                <ul>
+                    <li>Built a backend-only <strong>Statsig</strong> client in <strong>TypeScript + Node</strong> for gated rollouts and
+                        conversion A/B tests across Atlassian.com platform services, enabling server-side experimentation without frontend
+                        instrumentation.</li>
+                    <li>Integrated with configuration, identity and telemetry services for consistent assignment and exposure logging.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="experience-container">
+            <div class="experience-image">
+                <img src="images/aws.png" alt="Amazon Web Services logo">
+            </div>
+            <div class="experience-content">
+                <div class="experience-heading">
+                    <h3>Amazon Web Services</h3>
+                    <div class="experience-location">
+                        <p>June 2024 &ndash; Aug 2024</p>
+                        <p>Palo Alto, CA</p>
+                    </div>
+                </div>
+                <p>Software Engineering Intern</p>
+                <ul>
+                    <li>Led the CSR-to-SSR transition with <strong>Next.js</strong> and <strong>React</strong>, cutting initial load up to 40%
+                        and Largest Contentful Paint 35%; added lightweight ML heuristics to flag regressions and outlier sessions.</li>
+                    <li>Implemented SSR in our pages, cutting time-to-interactive 28% by rewriting critical pages in TypeScript.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="experience-container">
+            <div class="experience-image">
+                <img src="images/statberkeley.png" alt="Berkeley Statistics logo">
+            </div>
+            <div class="experience-content">
+                <div class="experience-heading">
+                    <h3>Statistics 198 - Computational Statistics</h3>
+                    <div class="experience-location">
+                        <p>Jan 2024-</p>
+                        <p>Berkeley, CA</p>
+                    </div>
+                </div>
                 <p>Head Instructor/Founder</p>
                 <ul>
                     <li>Authored comprehensive course notes for STAT-198, encapsulating intricate topics in computational statistics, thereby offering students a valuable and self-contained resource for mastering the subject.</li>
@@ -67,18 +147,20 @@
                     <li>Plan to cultivate students’ advanced skills in statistical software and programming, equipping them for research and application in computational statistics domains.</li>
                 </ul>
             </div>
-            <div class="experience-location">
-                <p>Jan 2024-</p>
-                <p>Berkeley, CA</p>
-            </div>
         </div>
-        
+
         <div class="experience-container">
             <div class="experience-image">
-                <img src="images/bairberkeley.png" alt="Experience Image">
+                <img src="images/bairberkeley.png" alt="Berkeley Artificial Intelligence Research logo">
             </div>
             <div class="experience-content">
-                <h3>Berkeley Artificial Intelligence Research (BAIR)</h3>
+                <div class="experience-heading">
+                    <h3>Berkeley Artificial Intelligence Research (BAIR)</h3>
+                    <div class="experience-location">
+                        <p>Sep-2023-Present</p>
+                        <p>Berkeley, CA</p>
+                    </div>
+                </div>
                 <p>Student/Mentee</p>
                 <ul>
                     <li>Collaboratively work under the guidance of a mentor from Sergey Levine’s renowned Robotic & AI Learning (RAIL)
@@ -87,16 +169,17 @@
                         academic journey with academic and professional aspirations in ML.</li>
                 </ul>
             </div>
-            <div class="experience-location">
-                <p>Sep-2023-Present</p>
-                <p>Berkeley, CA</p>
-            </div>
         </div>
+
         <!-- Footer/Contact Section - Copied from index.html -->
         <footer>
             <div class="footer-content">
                 <p>© Nicholas Adesina</p>
-                <p><a href="mailto:nickadesina@berkeley.edu">Contact Me</a></p>
+                <p>
+                    <a href="mailto:nickadesina@berkeley.edu">Contact Me</a> &middot;
+                    <a href="https://www.linkedin.com/in/nicholas-adesina-15a966220" target="_blank" rel="noopener">LinkedIn</a> &middot;
+                    <a href="https://github.com/nickadesina" target="_blank" rel="noopener">GitHub</a>
+                </p>
             </div>
             <div class="theme-toggle">
                 <button id="toggleTheme">

@@ -38,5 +38,7 @@ const typeText = () => {
 
 // Initialize the typing effect once the DOM is loaded
 document.addEventListener("DOMContentLoaded", function() {
-    typeText();
+    if (document.getElementById("typed-output")) {
+        typeText();
+    }
 });

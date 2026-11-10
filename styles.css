@@ -347,13 +347,185 @@ body.dark-mode .collapsible-content p {
     border-left: 2px solid #EAEAEA; /* Optional: Adding a left border for visual distinction */
 }
 
+/* Title on the left, dates/location on the right */
+.experience-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.experience-heading h3 {
+    margin-top: 0.4em;
+}
+
+.experience-note {
+    display: block;
+    font-size: 0.55em;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 4px;
+}
+
 .experience-location {
-    position: absolute;
-    top: 0%;    /* Adjust this to move it vertically */
-    right: 0%;  /* Adjust this to move it horizontally */
+    flex-shrink: 0;
     text-align: right; /* Align items to the right */
     padding: 5px; /* Padding around the text */
-    border-radius: 5px; /* Optional: adding a slight border-radius */
+}
+
+.experience-content .experience-location p {
+    font-size: 1.15em;
+    font-weight: 400;
+    margin: 0.3em 0;
+    white-space: nowrap;
+}
+
+/* Font Awesome icon used in place of a logo image */
+.experience-icon {
+    font-size: 7em;
+    color: #333333;
+}
+
+body.dark-mode .experience-icon {
+    color: #EAEAEA;
+}
+
+code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.9em;
+    background-color: #f1f1f1;
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+}
+
+body.dark-mode code {
+    background-color: #2a2a2a;
+}
+
+/* Skills / coursework chips */
+.skill-group {
+    margin-bottom: 20px;
+}
+
+.skill-group h3,
+#coursework-highlights h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.chip-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.chip-list li {
+    font-size: 1.05em;
+    padding: 6px 14px;
+    border: 1px solid #ccc;
+    border-radius: 999px;
+    background-color: #f9f9f9;
+}
+
+body.dark-mode .chip-list li {
+    background-color: #232323;
+    border-color: #3d3d3d;
+}
+
+#coursework-highlights {
+    margin-bottom: 30px;
+}
+
+#degree-name {
+    font-size: 1.1em;
+    margin-top: 0;
+}
+
+/* Contact icons in the intro */
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    font-size: 1.8em;
+    color: #333333;
+}
+
+.social-links a:hover {
+    color: #FF77FF;
+}
+
+body.dark-mode .social-links a {
+    color: #EAEAEA;
+}
+
+body.dark-mode .social-links a:hover {
+    color: #FF77FF;
+}
+
+/* Small screens: stack image above text */
+@media (max-width: 700px) {
+    #intro {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    #intro img {
+        width: 180px;
+        height: 180px;
+        margin-right: 0;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .experience-container {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 40px;
+    }
+
+    .experience-image {
+        margin: 0 0 15px;
+    }
+
+    .experience-image img {
+        max-height: 100px;
+        width: auto;
+    }
+
+    .experience-icon {
+        font-size: 4.5em;
+    }
+
+    .experience-content {
+        width: auto;
+        border-left: none;
+        border-top: 2px solid #EAEAEA;
+    }
+
+    .experience-heading {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .experience-location {
+        text-align: left;
+        padding: 0;
+    }
+
+    .experience-content .experience-location p {
+        white-space: normal;
+    }
 }
 
 
